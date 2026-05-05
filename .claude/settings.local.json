@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/usr/bin/find /Users/markuskus/Desktop/SENASA/Obsidian -maxdepth 1 -type d)",
+      "Bash(/usr/bin/find /Users/markuskus/Desktop/SENASA/Obsidian -name \"*.md\")",
+      "Bash(/usr/bin/find /Users/markuskus/Desktop/SENASA -type d -name \"*Bilbao*\")",
+      "Bash(/usr/bin/find /Users/markuskus/Desktop/SENASA -type d -name \"*MO*\")",
+      "Bash(/usr/bin/find /Users/markuskus/Desktop/SENASA/Obsidian/.raw/assets/SENASA_MO_Bilbao -name \"*.md\")",
+      "Bash(/usr/bin/find *)",
+      "Bash(brew list *)",
+      "Bash(python3 -c \"import PyPDF2; print\\('ok'\\)\")",
+      "Bash(python3 -c \"import pypdf; print\\('ok'\\)\")",
+      "Bash(python3 -c \"import pdfminer; print\\('ok'\\)\")",
+      "Bash(python3 *)",
+      "Bash(brew install *)"
+    ]
+  }
+}
