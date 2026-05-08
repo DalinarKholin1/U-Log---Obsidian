@@ -1,6 +1,13 @@
 ==============================================================
-       GUÍA RÁPIDA DE GIT & GITHUB - (Marc's Edition)
+       GUÍA RÁPIDA DE GIT & GITHUB - (Marc's Edition v2)
 ==============================================================
+
+0. EMPEZANDO UN PROYECTO (El Origen)
+--------------------------------------------------------------
+git clone <url>         # Descarga un proyecto de GitHub a tu Mac
+git init                # Convierte una carpeta normal en un repo de Git
+git remote -v           # Mira a qué URL de GitHub está conectado tu repo
+git remote add origin <url> # Conecta un repo local a uno nuevo en GitHub
 
 1. CONFIGURACIÓN INICIAL (Identidad)
 --------------------------------------------------------------
@@ -11,8 +18,7 @@ git config --global core.editor "nano"       # Cambiar Vim por Nano
 2. EL FLUJO DE TRABAJO DIARIO (Local)
 --------------------------------------------------------------
 ls                      # Listar archivos en la carpeta
-touch archivo.txt       # Crear un nuevo archivo vacío (MAC)
-ni archivo.txt          # Crear un nuevo archivo vacío (Windows)
+touch archivo.txt       # Crear un nuevo archivo vacío
 git status              # Ver qué archivos están "untracked" o listos
 git add archivo.txt     # Preparar un archivo (Staging Area)
 git add .               # Preparar TODOS los archivos modificados
@@ -23,6 +29,7 @@ git commit -m "mensaje" # Guardar la "foto" de tus cambios
 git branch              # Listar todas tus ramas locales
 git checkout -b rama    # Crear una rama nueva y entrar en ella
 git checkout main       # Volver a la rama principal
+git merge rama          # Fusionar una rama en la que estás actualmente
 git branch -d rama      # Borrar una rama (ya fusionada)
 
 4. TRABAJO REMOTO (GitHub)
@@ -30,14 +37,15 @@ git branch -d rama      # Borrar una rama (ya fusionada)
 git push origin main    # Subir cambios al servidor (rama main)
 git push -u origin rama # Subir rama nueva por primera vez
 git pull origin main    # Bajar los cambios de la web a tu Mac
+git fetch               # Descarga info del servidor pero no aplica cambios
 
 5. VISUALIZACIÓN Y TRUCOS
 --------------------------------------------------------------
 git log --oneline       # Ver historial simplificado
 git log --graph --all   # Ver el "dibujo" de las ramas
-git tree                # Comando para la visulalización del workflow completo en terminal
+git diff                # Ver exactamente qué líneas de código cambiaste
 
 ==============================================================
 FLUJO COMPLETO:
-Add -> Commit -> Push -> Pull Request (Web) -> Merge -> Pull
+Clone/Init -> Add -> Commit -> Push -> PR (Web) -> Merge
 ==============================================================
