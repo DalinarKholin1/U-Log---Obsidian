@@ -1,0 +1,42 @@
+==============================================================
+       GUÍA RÁPIDA DE GIT & GITHUB - (Marc's Edition)
+==============================================================
+
+1. CONFIGURACIÓN INICIAL (Identidad)
+--------------------------------------------------------------
+git config --global user.name "Tu Nombre"    # Quién eres
+git config --global user.email "tu@mail.com" # Tu correo
+git config --global core.editor "nano"       # Cambiar Vim por Nano
+
+2. EL FLUJO DE TRABAJO DIARIO (Local)
+--------------------------------------------------------------
+ls                      # Listar archivos en la carpeta
+touch archivo.txt       # Crear un nuevo archivo vacío
+git status              # Ver qué archivos están "untracked" o listos
+git add archivo.txt     # Preparar un archivo (Staging Area)
+git add .               # Preparar TODOS los archivos modificados
+git commit -m "mensaje" # Guardar la "foto" de tus cambios
+
+3. RAMAS (Branches)
+--------------------------------------------------------------
+git branch              # Listar todas tus ramas locales
+git checkout -b rama    # Crear una rama nueva y entrar en ella
+git checkout main       # Volver a la rama principal
+git branch -d rama      # Borrar una rama (ya fusionada)
+
+4. TRABAJO REMOTO (GitHub)
+--------------------------------------------------------------
+git push origin main    # Subir cambios al servidor (rama main)
+git push -u origin rama # Subir rama nueva por primera vez
+git pull origin main    # Bajar los cambios de la web a tu Mac
+
+5. VISUALIZACIÓN Y TRUCOS
+--------------------------------------------------------------
+git log --oneline       # Ver historial simplificado
+git log --graph --all   # Ver el "dibujo" de las ramas
+git tree                # Comando para la visulalización del workflow completo en terminal
+
+==============================================================
+FLUJO COMPLETO:
+Add -> Commit -> Push -> Pull Request (Web) -> Merge -> Pull
+==============================================================
