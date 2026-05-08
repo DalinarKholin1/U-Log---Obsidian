@@ -11,7 +11,8 @@ git config --global core.editor "nano"       # Cambiar Vim por Nano
 2. EL FLUJO DE TRABAJO DIARIO (Local)
 --------------------------------------------------------------
 ls                      # Listar archivos en la carpeta
-touch archivo.txt       # Crear un nuevo archivo vacío
+touch archivo.txt       # Crear un nuevo archivo vacío (MAC)
+ni archivo.txt          # Crear un nuevo archivo vacío (Windows)
 git status              # Ver qué archivos están "untracked" o listos
 git add archivo.txt     # Preparar un archivo (Staging Area)
 git add .               # Preparar TODOS los archivos modificados
